@@ -1,0 +1,17 @@
+class Solution {
+      public String destCity(List<List<String>> paths) {
+        HashSet<String> allcity=new HashSet<>();
+        for(List<String> l:paths){
+            allcity.add(l.get(0));
+            allcity.add(l.get(1));
+        }
+        for(List<String> l:paths){
+            if(allcity.contains(l.get(0)))allcity.remove(l.get(0));
+        }
+        String ans="";
+        for(String x:allcity){
+            ans=x;
+        }
+        return ans;
+    }
+}
