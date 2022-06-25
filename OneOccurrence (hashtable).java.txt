@@ -15,4 +15,3 @@ class Solution {
     return (int) count.values().stream().filter(v -> v == 0).count();
   }
 }
-
