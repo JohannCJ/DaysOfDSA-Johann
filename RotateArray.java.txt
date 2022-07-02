@@ -1,0 +1,17 @@
+//https://leetcode.com/problems/rotate-array/
+
+class Solution {
+  public void rotate(int[] nums, int k) {
+   if (k==0) return;
+   if (nums == null || nums.length == 0) return;
+   
+   for (int i=0; i<k; i++) {
+      int j=nums.length-1;
+      int temp = nums[j];
+      for ( ; j>0; j--) {
+         nums[j] = nums[j-1];
+      }
+      nums[0] = temp;
+   }
+ }
+}
